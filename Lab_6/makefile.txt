@@ -1,0 +1,8 @@
+task1: 
+
+	gcc  process_schedule.c -o process_schedule   -lncurses
+bankers: bankers.o
+	gcc -o $@ $^ -lpthread
+
+bankers.o: bankers.c
+	gcc -c -g $^ -o $@
